@@ -1,6 +1,9 @@
 #include<stdio.h>
 int main(){
-    int num = 5;
+    int num;
+
+    printf("Enter the multiplication table you want to generate; \n");
+    scanf("%d", &num);
     for(int i =1; i < 11; i++){
         printf("%d x %d = %d\n",num, i, num * i);
 
