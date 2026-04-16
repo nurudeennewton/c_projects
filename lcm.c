@@ -1,46 +1,32 @@
 #include<stdio.h>
+#include<stdbool.h>
 
-// LEAST COMMMON MULTIPE OF TWO MUMBERS
 
-int multipleA(int a, int b, int multA){
-	for( int i = 1; i < b; i++ ){
-		
-		multA = a * i;
-		
-		
-	}
-	
-    return multA;
-}
+int main(){
 
-int multipleB(int a, int b, int multB){
-	for( int i = 1; i < a; i++ ){
-		
-		multB = b * i;
-		
-		
-	}
-	
-    return multB;
-}
+    int a;
+    int b;
+    int max;
 
-int main (){
-	
-	int a; 
-	int b;
-	int multA;
-	int multB;
-	printf("Enter the first number: \n");
-	scanf("%d", &a);
-	
-	printf("Enter the second number: \n");
-	scanf("%d", &b);
-	
-	if( multA == multB){
-		
-		printf("The LCM of %d and %d is %d", a, b, multA);
-		
-	}
-	
-	return 0;
+    printf("Enter the first number: ");
+    scanf("%d", &a);
+
+    printf("Enter the second number: ");
+    scanf("%d", &b);
+
+    if (a > b){
+        max = a;
+    }
+    else{
+        max = b;
+    }
+
+    while (true){
+        if (max % a == 0 && max % b == 0){
+            break;
+        }
+    max++;
+    }
+    
+    printf("The LCM of %d and %d is %d", a, b, max);
 }
